@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+}
+
+.side-container {
+    flex: 1;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin-top: 20vh;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+.main-container {
+    flex: 2;
+    border: 2px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-inputs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-inputs div {
+    flex: 1;
+}
+
+
+
+
+
