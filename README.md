@@ -1,4 +1,5 @@
 # sign-up-form
+
 This is a sign-up form project for TOP curriculum
 
 # form content
@@ -19,3 +20,7 @@ This is a sign-up form project for TOP curriculum
 - Large background image
 - External font for logo
 - Special styling for invalid input fields
+
+# copyright
+
+photo by Michail Dementiev on Unsplash
