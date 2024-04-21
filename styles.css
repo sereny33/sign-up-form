@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -10,6 +18,8 @@ body {
 }
 
 .side-container {
+    background: url(/background.jpg) center no-repeat;
+    background-size: cover;
     flex: 1;
     border: 2px solid;
     display: flex;
@@ -22,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, 30%);
     margin-top: 20vh;
 }
 
@@ -31,6 +41,24 @@ body {
     width: auto;
 }
 
+.logo span {
+    font-family: 'norsebold';
+    font-size: 4em;
+    color: white;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 30%);
+    color: white;
+    text-align: center;
+
+}
+
+.copyright a {
+    color: white;
+}
 
 
 
@@ -44,14 +72,27 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
 
+}
+
+.main-container h2,
+.main-container p {
+    padding-left: 40px;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
+    padding: 30px;
+    
+}
+
+input {
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .form-inputs {
@@ -59,10 +100,15 @@ fieldset {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    width: 70%;
+    
 }
 
 .form-inputs div {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 
