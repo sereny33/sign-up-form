@@ -8,6 +8,7 @@
 
 html {
     box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -15,13 +16,13 @@ body {
     margin: 0;
     min-height: 100vh;
     display: flex;
+    background-color: #f9fafb
 }
 
 .side-container {
     background: url(/background.jpg) center no-repeat;
     background-size: cover;
     flex: 1;
-    border: 2px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,6 +54,7 @@ body {
     background-color: rgba(0, 0, 0, 30%);
     color: white;
     text-align: center;
+    font-size: small;
 
 }
 
@@ -68,16 +70,15 @@ body {
 
 .main-container {
     flex: 2;
-    border: 2px solid;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
 
-.main-container h2,
-.main-container p {
+.form-description,
+.footer {
+    max-width: 50vw;
     padding-left: 40px;
 }
 
@@ -85,7 +86,14 @@ fieldset {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    
+    border: none;
+    box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: 3px;
 }
 
 input {
@@ -93,6 +101,10 @@ input {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    appearance: none;
+    border: 1px solid;
+    border-radius: 3px;
+    height: 2em;
 }
 
 .form-inputs {
@@ -111,7 +123,20 @@ input {
     flex-direction: column;
 }
 
+button[type="submit"] {
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 10px 30px;
+    background-color: #4a8dae;
+    color: white;
+    border-radius: 10px;
+    font-size: 1em;
+}
 
+label {
+    text-transform: uppercase;
+    font-size: small;
+}
 
 
 
