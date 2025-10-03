@@ -9,8 +9,8 @@
   <body>
     <div class="side-container">
       <div class="logo">
-        <img src="./odin-lined.png" alt="logo" />
-        <span>Odin</span>
+        <img src="./images/odin-lined.png" alt="logo" />
+        <span>Sign-up form</span>
       </div>
 
       <div class="copyright">
@@ -22,51 +22,52 @@
       </div>
     </div>
 
-    <div class="main-container">
-      <h2 class="form-description">
+    <main class="main-container">
+      <p class="form-description">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla sunt
         quisquam illo accusamus laborum est ad aliquam distinctio quam. Facilis
         quaerat explicabo tempora animi itaque facere fuga rerum vel nam.
-      </h2>
+      </p>
 
-      <form action="" method="get">
-        <fieldset>
-          <div class="form-header">
-            <h2>Let's do this!</h2>
-          </div>
-
+      <form action="https://httpbin.org/post" method="post">
+        <fieldset  class="form-body">
+            <h2 class="form-header">Let's do this!</h2>
+            
           <div class="form-inputs">
-            <div>
+            <div class="form-input-item">
               <label for="name">First name</label>
-              <input type="text" name="userName" id="name" />
+              <input type="text" name="name" id="name" maxlength="30" required/>
             </div>
-            <div>
+            <div class="form-input-item">
               <label for="surname">Last name</label>
-              <input type="text" name="userSurname" id="surname" />
+              <input type="text" name="surname" id="surname" maxlength="40" required/>
             </div>
-            <div>
+            <div class="form-input-item">
               <label for="email">Email</label>
-              <input type="email" name="userEmail" id="email" />
+              <input type="email" name="email" id="email" required/>
             </div>
-            <div>
+            <div class="form-input-item">
               <label for="phone">Phone number</label>
-              <input type="tel" name="userPhone" id="phone" />
+              <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number" placeholder="Enter a 10-digit phone number" required/>
             </div>
-            <div>
-              <label for="pwd">Password</label>
-              <input type="password" name="userPwd" id="pwd" />
+            <div class="form-input-item">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
+              <p class="attention-text">*Passwords do not match!</p>
             </div>
-            <div>
-              <label for="confirmation">Confirm Password</label>
-              <input type="password" name="confirmUserPwd" id="confirmation" />
+
+            <div class="form-input-item">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" name="confirmPassword" id="confirmPassword" required/>
+              <p class="attention-text">*Passwords do not match!</p>
             </div>
           </div>
         </fieldset>
 
-        <button type="submit">Create Account</button>
+        <button type="submit" id="submit-button">Create Account</button>
       </form>
-
-      <p class="footer">Already have an account? <a href="">Log in!</a></p>
-    </div>
+      <p class="footer">Already have an account? <a href="#0">Log in!</a></p>
+    </main>
+    <script src="./script.js"></script>
   </body>
 </html>

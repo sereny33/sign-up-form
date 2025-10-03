@@ -13,24 +13,28 @@ html {
 
 body {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     min-height: 100vh;
+    max-width: 1440px;
     display: flex;
-    background-color: #f9fafb
+    flex-flow: row nowrap;
+    background-color: #f9fafb;
+    font-size: 18px;
 }
 
 .side-container {
-    background: url(/background.jpg) center no-repeat;
+    background: url(./images/background.jpg) center no-repeat;
     background-size: cover;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 .logo {
     display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 30%);
@@ -73,7 +77,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
 
+.form-description {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .form-description,
@@ -82,18 +90,20 @@ body {
     padding-left: 40px;
 }
 
-fieldset {
+.form-body {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 40px;
     border: none;
     box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.2);
     background-color: white;
+    gap: 10px;
 }
 
-label {
-    font-weight: 700;
-    margin-bottom: 3px;
+.form-input-item>label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: .2em;
 }
 
 input {
@@ -102,9 +112,15 @@ input {
     margin: 0;
     box-sizing: border-box;
     appearance: none;
-    border: 1px solid;
+    border: 1px solid black;
     border-radius: 3px;
     height: 2em;
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid #4a8daeb3;
+    box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.2);
 }
 
 .form-inputs {
@@ -127,10 +143,12 @@ button[type="submit"] {
     margin-top: 20px;
     margin-left: 40px;
     padding: 10px 30px;
-    background-color: #4a8dae;
-    color: white;
+    background-color: #4a8daeb3;
+    color: black;
+    border: none;
     border-radius: 10px;
     font-size: 1em;
+    box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.2);
 }
 
 label {
@@ -138,5 +156,16 @@ label {
     font-size: small;
 }
 
+.incorrect {
+    border: 1px solid red;        
+}
 
+.attention-text {
+    display: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    color: red;
+    letter-spacing: 2px;
+}
 
